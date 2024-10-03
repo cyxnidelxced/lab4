@@ -1,42 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 
+
 body {
     text-align: center;
-    margin: 5rem;
     background: url(../images/background.png);
-}
-  
-section {
-    width: 400px;
-    margin: auto;
-}
-  
-.frame {
-    position:relative;
-    width:400px;
-    height:auto;
-    margin: 1rem 0;
-}
-  
-.slide {
-    display:block;
-    margin-bottom: 2rem;
-}
-  
-  
-.hide {
-    display: none;
-}
-  
-  
-.current {
-    transition: opacity .5s ease-out;
-}
-  
-  
-.spacer {
-    padding: 2rem;
+    margin: 4em;
 }
 
 h1 {
@@ -49,4 +18,60 @@ h2 {
     font-family: "Calligraffitti", cursive;
     font-weight: 400;
     font-style: normal;
+}
+  
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: none;
+    position: relative;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    margin-left: 20rem;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
