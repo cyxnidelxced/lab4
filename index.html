@@ -10,69 +10,55 @@
 
 <body> 
     <h1>Genshin Impact</h1>
-
-    <section>
-      <h2>Geo Vision Users</h2>
     
-      <div class="carousel">
-        <button class="carousel_button carousel_button--left">
-            <img src="images/left.png" alt="">
-        </button>
-        <div class="carousel_track-container">
-            <ul class="carousel_track">
-                <li class="carousel_slide">
-                    <img src="images/zhongli.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/albedo.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/chiori.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/gorou.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/itto.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/noelle.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/kachina.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/navia.jpeg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/ningguang.jpg" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/xilonen.webp" alt="">
-                </li>
-                <li class="carousel_slide">
-                    <img src="images/yun-jin.jpg" alt="">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel_button carousel_button--right">
-            <img src="images/right.png" alt="">
-        </button>
-
-        <div class="carousel_nav">
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-        </div>
-      </div>
+    <h2>Geo Vision Users</h2>
     
-    </section>
-</body> 
+    <div class="carousel">
+        <div class="carousel-images">
+            <div class="carousel-item active">
+                <img src="images/zhongli.jpg" alt="Image 1">
+                <div class="caption">Zhongli</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/navia.jpeg" alt="Image 2">
+                <div class="caption">Navia</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/xilonen.webp" alt="Image 3">
+                <div class="caption">Xilowen</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/albedo.jpg" alt="Image 4">
+                <div class="caption">Albedo</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/chiori.jpg" alt="Image 5">
+                <div class="caption">Chiori</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/gorou.jpg" alt="Image 6">
+                <div class="caption">Gorou</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/kachina.jpg" alt="Image 7">
+                <div class="caption">Kachina</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/ningguang.jpg" alt="Image 8">
+                <div class="caption">Ningguang</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/noelle.jpg" alt="Image 9">
+                <div class="caption">Noelle</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/yun-jin.jpg" alt="Image 10">
+                <div class="caption">Yun Jin</div>
+            </div>
+        </div>
+        
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    
+    </div>
 </html>
