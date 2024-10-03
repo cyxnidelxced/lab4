@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+  }
+  
+  section {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .frame {
+    position:relative;
+    width:400px;
+    height:auto;
+    margin: 1rem 0;
+  }
+  
+  .slide {
+    display:block;
+    margin-bottom: 2rem;
+  }
+  
+  
+  .hide {
+    display: none;
+  }
+  
+  
+  .current {
+    transition: opacity .5s ease-out;
+  }
+  
+  
+  .spacer {
+    padding: 2rem;
+  }
