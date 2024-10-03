@@ -1,35 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
 body {
     text-align: center;
-  }
+    margin: 5rem;
+    background: url(../images/background.png);
+}
   
-  section {
+section {
     width: 400px;
     margin: auto;
-  }
+}
   
-  .frame {
+.frame {
     position:relative;
     width:400px;
     height:auto;
     margin: 1rem 0;
-  }
+}
   
-  .slide {
+.slide {
     display:block;
     margin-bottom: 2rem;
-  }
+}
   
   
-  .hide {
+.hide {
     display: none;
-  }
+}
   
   
-  .current {
+.current {
     transition: opacity .5s ease-out;
-  }
+}
   
   
-  .spacer {
+.spacer {
     padding: 2rem;
-  }
+}
+
+h1 {
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Calligraffitti", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
