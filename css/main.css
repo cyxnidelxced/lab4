@@ -91,11 +91,11 @@ h2 {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: rgb(252, 255, 195);
+    background-color: rgba(102, 102, 102, 0.329);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color: rgb(255, 224, 84);
+    background-color: rgb(255, 231, 126);
 }
