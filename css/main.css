@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Tangerine:wght@400;700&display=swap');
 
-
+* {
+    box-sizing: border-box;
+}
+  
 body {
     text-align: center;
     background: url(../images/background.jpg);
@@ -25,7 +28,7 @@ h2 {
     font-weight: 400;
     font-style: normal;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 3px #000000, 0 0 5px #e5ff00;
+    text-shadow: 0 0 3px #000000, 0 0 5px #8a9900;
 }
   
 .carousel {
