@@ -4,7 +4,6 @@ const indicatorsContainer = document.querySelector('.indicators');
 const totalSlides = slides.length;
 let autoplayInterval;
 
-
 function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.style.display = (i === index) ? 'block' : 'none';
