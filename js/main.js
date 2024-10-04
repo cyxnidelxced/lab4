@@ -2,6 +2,8 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
 const indicatorsContainer = document.querySelector('.indicators');
 const totalSlides = slides.length;
+let autoplayInterval;
+
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
