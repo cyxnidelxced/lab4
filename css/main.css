@@ -6,8 +6,9 @@
 body {
     text-align: center;
     background: url(../images/background.png);
-    text-align: center;
-    margin: 4em;
+    align-items: center;
+    position:fixed;
+    margin: 4em auto;
 }
 
 
