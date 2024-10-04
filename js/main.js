@@ -30,7 +30,7 @@ function goToSlide(index) {
     showSlide(currentSlide);
 }
 
-function createIndicators() {
+/*function createIndicators() {
     for (let i = 0; i < totalSlides; i++) {
         const indicator = document.createElement('div');
         indicator.classList.add('indicator');
@@ -38,7 +38,7 @@ function createIndicators() {
         indicator.addEventListener('click', () => goToSlide(i));
         indicatorsContainer.appendChild(indicator);
     }
-}
+}*/
 
 function startAutoplay() {
     autoplayInterval = setInterval(nextSlide, 3000);
