@@ -21,6 +21,16 @@ function changeSlide(direction) {
     showSlide(currentSlide);
 }
 
+/*function createIndicators() {
+    for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(i));
+        indicatorsContainer.appendChild(indicator);
+    }
+}*/
+
 // Autoplay feature
 let autoplay = setInterval(() => {
     changeSlide(1);
