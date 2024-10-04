@@ -16,12 +16,16 @@ h1 {
     font-family: "Eagle Lake", serif;
     font-weight: 400;
     font-style: normal;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
 }
 
 h2 {
     font-family: "Calligraffitti", cursive;
     font-weight: 400;
     font-style: normal;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px #000000, 0 0 5px #e5ff00;
 }
   
 .carousel {
