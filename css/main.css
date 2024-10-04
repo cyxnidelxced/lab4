@@ -81,11 +81,11 @@ button {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(253, 255, 218);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color: black;
+    background-color: rgb(255, 228, 105);
 }
