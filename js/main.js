@@ -40,6 +40,7 @@ function createIndicators() {
     }
 }
 
+// Autoplay feature
 function startAutoplay() {
     autoplayInterval = setInterval(nextSlide, 3000);
 }
@@ -52,7 +53,7 @@ function stopAutoplay() {
 document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay);
 document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
 
-// Initialize the carousel
-createIndicators();
+// Initialize carousel
 showSlide(currentSlide);
+createIndicators();
 startAutoplay();
