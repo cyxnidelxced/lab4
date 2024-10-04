@@ -5,8 +5,8 @@
 
 body {
     text-align: center;
-    background: url(../images/background.png);
-    align-items: center;
+    background: url(../images/background.jpg);
+    text-align: center;
     position:fixed;
     margin: 4em auto;
 }
