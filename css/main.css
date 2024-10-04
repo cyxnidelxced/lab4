@@ -87,11 +87,11 @@ button {
     width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: rgb(253, 255, 218);
+    background-color: rgb(252, 255, 195);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color: rgb(255, 228, 105);
+    background-color: rgb(255, 224, 84);
 }
