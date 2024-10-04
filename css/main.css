@@ -2,15 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Tangerine:wght@400;700&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-  
 body {
     text-align: center;
-    background: url(../images/background.jpg);
-    text-align: center;
-    position:fixed;
+    background: url(../images/background.png);
     margin: 4em auto;
 }
 
@@ -68,7 +62,7 @@ h2 {
     border-radius: 5px;
 }
 
-button {
+.back, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
