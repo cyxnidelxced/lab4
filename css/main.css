@@ -44,16 +44,15 @@ h2 {
 
 .caption {
     position: absolute;
-    margin-left: 20rem;
     bottom: 10px;
-    left: 10px;
+    left: 45%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.prev, .next {
+.back, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -64,7 +63,7 @@ h2 {
     border-radius: 5px;
 }
 
-.prev {
+.back {
     left: 10px;
 }
 
