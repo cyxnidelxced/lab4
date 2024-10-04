@@ -40,10 +40,19 @@ function createIndicators() {
 }
 
 // Autoplay feature
-let autoplay = setInterval(() => {
-    changeSlide(1);
-}, 3000); // Change slide every 3 seconds
+function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 3000);
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+// Event listeners to pause on hover
+document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay);
+document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
 
 // Initialize carousel
 showSlide(currentSlide);
 createIndicators();
+startAutoplay();
