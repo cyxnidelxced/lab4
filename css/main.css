@@ -1,35 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+
 body {
     text-align: center;
-  }
+    background: url(../images/background.png);
+    margin: 4em;
+}
+
+h1 {
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Calligraffitti", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
   
-  section {
-    width: 400px;
+.carousel {
+    position: relative;
+    max-width: 600px;
     margin: auto;
-  }
-  
-  .frame {
-    position:relative;
-    width:400px;
-    height:auto;
-    margin: 1rem 0;
-  }
-  
-  .slide {
-    display:block;
-    margin-bottom: 2rem;
-  }
-  
-  
-  .hide {
+    overflow: hidden;
+    margin-top: 2.5em;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
     display: none;
-  }
-  
-  
-  .current {
-    transition: opacity .5s ease-out;
-  }
-  
-  
-  .spacer {
-    padding: 2rem;
-  }
+    position: relative;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.back {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: rgb(253, 255, 218);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: rgb(255, 228, 105);
+}

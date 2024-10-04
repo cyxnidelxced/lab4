@@ -10,32 +10,56 @@
 
 <body> 
     <h1>Genshin Impact</h1>
-
-    <section>
-      <h2>Geo Vision Users</h2>
     
-      <figure class="frame">
-        <img class="slide current" src="images/zhongli.jpg" alt="">
-        <img class="slide" src="images/albedo.jpg" alt="">
-        <img class="slide" src="images/chiori.jpg" alt="">
-        <img class="slide" src="images/gorou.jpg" alt="">
-        <img class="slide" src="images/itto.jpg" alt="">
-        <img class="slide" src="images/noelle.jpg" alt="">
-        <img class="slide" src="images/kachina.jpg" alt="">
-        <img class="slide" src="images/navia.jpeg" alt="">
-        <img class="slide" src="images/ningguang.jpg" alt="">
-        <img class="slide" src="images/xilonen.webp" alt="">
-        <img class="slide" src="images/yun-jin.jpg" alt="">
-        <figcaption>test</figcaption>
-      </figure>
+    <h2>Geo Vision Users</h2>
     
-      
-      <!-- remove these controls and add them back in via JS only -->
-      <div class="controls">
-        <a href="#" class="back-btn">Back</a>
-        <a href="#" class="next-btn">Next</a>
-      </div>
-    
-    </section>
-</body> 
+    <div class="carousel">
+        <div class="carousel-images">
+            <div class="carousel-item active">
+                <img src="images/zhongli.jpg" alt="Image 1">
+                <div class="caption">Zhongli</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/navia.jpeg" alt="Image 2">
+                <div class="caption">Navia</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/xilonen.webp" alt="Image 3">
+                <div class="caption">Xilowen</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/albedo.jpg" alt="Image 4">
+                <div class="caption">Albedo</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/chiori.jpg" alt="Image 5">
+                <div class="caption">Chiori</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/gorou.jpg" alt="Image 6">
+                <div class="caption">Gorou</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/kachina.jpg" alt="Image 7">
+                <div class="caption">Kachina</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/ningguang.jpg" alt="Image 8">
+                <div class="caption">Ningguang</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/noelle.jpg" alt="Image 9">
+                <div class="caption">Noelle</div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/yun-jin.jpg" alt="Image 10">
+                <div class="caption">Yun Jin</div>
+            </div>
+        </div>
+        
+        <div class="indicators">
+        <button class="back" onclick="prevSlide(-1)">&#10094;</button>
+        <button class="next" onclick="nextSlide(1)">&#10095;</button>
+        </div>
+    </div>
 </html>

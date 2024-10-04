@@ -1,80 +1,58 @@
-//get the whole ball rolling when the page completes loading.
-document.addEventListener('DOMContentLoaded', init);
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const indicatorsContainer = document.querySelector('.indicators');
+const totalSlides = slides.length;
+let autoplayInterval;
 
-// this function prepares the page for user interaction
-function init() {
-  //create shortcut vars
-  const back_btn = document.querySelector(".back-btn");
-  const next_btn = document.querySelector(".next-btn");
-  const frame = document.querySelector(".frame");
-  const slides = frame.querySelectorAll("img");
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+    });
 
-  //with JS active, hide all images
-  slides.forEach((slide) => {
-    slide.classList.add("hide");
-  });
-  
-  // now, show the first slide
-  slides[0].classList.remove("hide");
-  
-   next_btn.addEventListener("click",changeSlide);
-   back_btn.addEventListener("click", changeSlide);
-  
-// TODO: Remove the controls from the HTML
-// and add in the next/back controls via JS
-  
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+    });
 }
 
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
 
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
 
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
 
-function changeSlide(e) {
-  
-    // stop link from trying to reload page
-    e.preventDefault();
-    
-    //shortcut vars
-    const frame = document.querySelector(".frame");
-    const slides = frame.querySelectorAll("img");
-    let showing = document.querySelector(".current");
-    let nextUp = "";
-  
-    // check which control was clicked and set nextUp apporpriately
-    if(e.target.className == 'next-btn') {
-      nextUp = showing.nextElementSibling;
+function createIndicators() {
+    for (let i = 0; i < totalSlides; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(i));
+        indicatorsContainer.appendChild(indicator);
     }
-  
-    if(e.target.className == 'back-btn') {
-      nextUp = showing.previousElementSibling;
-    }
-    
-    // deactivate current image
-    showing.classList.toggle("hide");
-    showing.classList.toggle("current");
-    
-    //make sure next image is there
-    if (!nextUp) {
-      nextUp = slides[slides.length - 1];
-    }
-  
-   //make sure nexUp is an image tag and NOT the figcaption
-    if (nextUp.nodeName !== "IMG") {
-      nextUp = slides[0];
-    }
-  
-    // activate next image
-    nextUp.classList.remove("hide");
-    nextUp.classList.add("current");
-  }
+}
 
+function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 3000);
+}
 
-// remaining steps: 
-// 1. dynamically update the figcation text for each image.
-// 2. add an autoplay feature that cancels when user interacts with controls.
-// 3. add at least 10 images.
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
 
-//BONUS: 
-// 1. Add at least two more figure tags in the html with several images each.
-// 2. add a set of controls to switch the visibility of different albums.
-// 3. always show the first image in an album when swapping albums.
-// 4. make sure the captions continue to show the right text for each image.
+// Event listeners to pause on hover
+document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay);
+document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
+
+// Initialize the carousel
+createIndicators();
+showSlide(currentSlide);
+startAutoplay();
