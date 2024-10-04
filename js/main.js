@@ -57,6 +57,7 @@ createIndicators();
 showSlide(currentSlide);
 startAutoplay();
 
+
 //canvas
 let c = init('canvas');
 w = canvas.width = window.innerWidth;
