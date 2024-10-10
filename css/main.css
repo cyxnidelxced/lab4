@@ -5,6 +5,8 @@
 body {
     text-align: center;
     background: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 4em auto;
 }
 
@@ -40,6 +42,7 @@ h2 {
 .carousel-item {
     min-width: 100%;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .carousel-item.active {
