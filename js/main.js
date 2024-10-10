@@ -54,6 +54,10 @@ document.querySelector('.carousel').addEventListener('mouseenter', stopAutoplay)
 document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay);
 
 // Initialize carousel
+let images = document.querySelectorAll('.carousel-item');
+images.forEach((img) => {
+    img.style.display="none";
+});
 showSlide(currentSlide);
 createIndicators();
 startAutoplay();
