@@ -71,14 +71,6 @@ h2 {
     border-radius: 18px;
 }
 
-.back {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
 .indicators {
     text-align: center;
     margin-top: 10px;

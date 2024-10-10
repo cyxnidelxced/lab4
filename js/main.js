@@ -58,6 +58,14 @@ let images = document.querySelectorAll('.carousel-item');
 images.forEach((img) => {
     img.style.display="none";
 });
+let left = document.querySelectorAll('.back');
+left.forEach((btn) => {
+    btn.style.left = "10px";
+});
+let right = document.querySelectorAll('.next');
+right.forEach((btn) => {
+    btn.style.right = "10px";
+});
 showSlide(currentSlide);
 createIndicators();
 startAutoplay();
