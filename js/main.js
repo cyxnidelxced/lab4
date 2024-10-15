@@ -57,8 +57,7 @@ document.querySelector('.carousel').addEventListener('mouseleave', startAutoplay
 let images = document.querySelectorAll('.carousel-item');
 images.forEach((img) => {
     img.style.display="none";
-    img.style.animation="fade 1.5s ease-in-out";
-});
+        img.style.animation="fade 400ms ease-in-out 1 alternate";
 let left = document.querySelectorAll('.back');
 left.forEach((btn) => {
     btn.style.left = "10px";
