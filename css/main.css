@@ -46,7 +46,7 @@ h2 {
 }
 
 @keyframes fade {
-    from {opacity: 0.2}
+    from {opacity: 0}
     to {opacity: 1}
 }
 
